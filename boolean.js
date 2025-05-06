@@ -11,5 +11,3 @@ let isRaining = true;
 
 console.log(canPlay);
 console.log(canShoot);
-
-console.log('2' === 2)
