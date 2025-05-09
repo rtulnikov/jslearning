@@ -1,13 +1,13 @@
-let number = 0;
-while(number < 18){
-    number = prompt("Введите число");
-    console.log(typeof(number));
-};
-let conf = false;
-while(!conf){
-    conf = confirm('Вам точно больше 18 лет?')
-}
-alert('Access granted!')
+// let number = 0;
+// while(number < 18){
+//     number = prompt("Введите число");
+//     console.log(typeof(number));
+// };
+// let conf = false;
+// while(!conf){
+//     conf = confirm('Вам точно больше 18 лет?')
+// }
+// alert('Access granted!')
 // let conf = confirm("Вам уже есть 10 лет?");
 // console.log(number);
 
