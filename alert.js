@@ -18,10 +18,9 @@ console.log( `
 
 console.log( `Ваш возраст ${age} лет`);
 
-console.log( `Ваш 
-    возраст 
-    ${age} 
-    лет`);
+console.log( `
+    Ваш 
+    возраст ${age} лет`);
 
 
 const needAge = 12;
