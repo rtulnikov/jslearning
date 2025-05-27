@@ -20,3 +20,10 @@ console.log(part);
 let hu =   'Дима хватит спать';
 console.log(hu.trim().lastIndexOf('и') );
 console.log(hu.at(-1));
+
+// экранирование символов
+
+const park = "Парк \"Царицыно\"";
+const park2 = `Парк "Царицыно"`;
+const park3 = 'Парк "Царицыно"';
+console.log(park3);
