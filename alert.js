@@ -8,8 +8,8 @@
 // console.log(age);
 
 
-let age = prompt('Введите ваш возраст');
-console.log( 'Ваш возраст ' + age + ' лет');
+// let age = prompt('Введите ваш возраст');
+// console.log( 'Ваш возраст ' + age + ' лет');
 
 console.log( `
     Ваш 
