@@ -10,6 +10,7 @@
 
 // let age = prompt('Введите ваш возраст');
 // console.log( 'Ваш возраст ' + age + ' лет');
+let age = 15; 
 
 console.log( `
     Ваш 
@@ -28,3 +29,8 @@ const shoot =  age === needAge;
 console.log(shoot);
 
 console.log( 'undefined' === undefined );
+
+let num = prompt('Введите число')
+console.log(num, Math.sqrt(num));
+
+console.log(Math.floor(Math.sqrt(num)));
