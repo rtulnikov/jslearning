@@ -23,3 +23,7 @@ console.log(animals[0]);
 console.log(animals.pop());
 console.log(animals);
 // console.log(animals[1].length);
+
+
+const numbers = [4, 3, 2, 1];
+console.log(numbers.reverse());
