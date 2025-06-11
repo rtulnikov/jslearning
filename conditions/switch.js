@@ -1,5 +1,5 @@
 const number = 5;
-if (number >= 20) {
+if ( (number >= 20) === true ) {
     console.log('20')
 } else if (number >= 10)  {
     console.log('10')
