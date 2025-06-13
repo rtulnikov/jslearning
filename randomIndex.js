@@ -1,4 +1,4 @@
- const animals = ['Тигр','Олень', 'Зубр', 'Хорек', 'Лось', 'собака'];
+ const animals = ['Тигр','Олень', 'Зубр', 'Хорек', 'Лось', 'Собака'];
   let randomIndex = Math.floor(Math.random() *animals.length);
 
 let randomAnimal = animals[randomIndex];
