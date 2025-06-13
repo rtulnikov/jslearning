@@ -20,12 +20,12 @@ console.log('Цикл завершён');
  while (index < animals.length) {
         
     if (index === 2) {
-        ++index;
+       index++;
         continue;
     }else {
         console.log(animals[index]);
     }
-     ++index;
+     index++;
  }
 
  let age = 0;
