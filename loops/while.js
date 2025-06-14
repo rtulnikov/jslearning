@@ -9,23 +9,17 @@ while(number < 20){
 }
 console.log('Цикл завершён');
 
-
-console.log('Цикл завершён');
-
-
-
- const animals = ['Тигр','Олень', 'Зубр', 'Хорек', 'Лось', 'Собака'];
+const animals = ['Тигр','Олень', 'Зубр', 'Хорек', 'Лось', 'Собака'];
  let index = 0;
 
  while (index < animals.length) {
-        
     if (index === 2) {
        index++;
         continue;
     }else {
         console.log(animals[index]);
     }
-     index++;
+    index++;
  }
 
  let age = 0;
@@ -33,3 +27,12 @@ console.log('Цикл завершён');
     age = prompt('Введите ваш возраст');
  }
  document.write('Ты большая какашка');
+
+ let numbers = [1, 2, 3, 4, 5, 6,7,8,9,10];
+ let ind = 0;
+ let sum = 0;
+while(ind < numbers.length) {
+  sum =  numbers[ind] + sum
+  ind++ ; 
+console.log(sum);
+}
