@@ -29,3 +29,24 @@ while(i < 11) {
     i += 2
     
 }
+
+let seven = 7;
+do {
+console.log('Привет, какашка мелкая Дима');
+  seven += 2
+}
+while(seven < 7) 
+
+  do {
+    console.log('Дима, ты запарил ныть, иди в сад')
+    
+  }
+  while(seven < 7)
+
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers2 = [];
+
+for(let elem of numbers) {
+numbers2.push(elem *10);
+}
+console.log(numbers2);

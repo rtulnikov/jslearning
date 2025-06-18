@@ -26,10 +26,7 @@ let word1 =  words[1][0].toUpperCase() + words[1].slice(1);
 let word2 =  words[2][0].toUpperCase() + words[2].slice(1);
 let word3 =  words[3][0].toUpperCase() + words[3].slice(1);
 
-
-
 let result = [];
-
 
 for(let i = 0; i < words.length; i++) {
 console.log(words[i][0].toUpperCase() + words[i].slice(1));
