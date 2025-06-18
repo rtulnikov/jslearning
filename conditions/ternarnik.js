@@ -27,37 +27,30 @@ let ranks = ['рядовой', 'сержант', 'лейтенант'];
 console.log(ranks)
 
 // const rank = ranks[2];
-let rank = ranks[Math.floor(Math.random() *ranks.length)];
-let randomIndex = ranks[rank];
-console.log(rank);
+let index = Math.floor(Math.random() *ranks.length);
+let rank = ranks[index];
 
-
-
-
-// if (rank === 'рядовой') {
-//     let exp = 10; 
-//     let damage =  exp > 5 ? 30 : 25;
-//     console.log('Выполняйте приказ! Защитите позицию! Ваш урон ' + damage );
-//     } else  if (rank === 'сержант') {
-//         console.log('Доложите о готовности! Вы ведущий в бой.')
-//     } else  if (rank === 'лейтенант') {
-//         console.log('Ваша задача — координация! Направляйте подразделения.')
-//     } else {
-//         console.log('Неизвестное звание. Ждите подтверждения...')
-//     };
-
+let damage = 25;
+let exp = Math.floor(Math.random()  *10 +1);
+let crit = exp > 7 ? 1.75 : 1.25;
 switch (rank) {
-   case 'рядовой' : 
-    let exp = 10;
-    let damage = exp > 5 ? 30 :25 ;
-    console.log('Выполняйте приказ! Защитите позицию! Ваш урон ' + damage);
-    break
+    case 'рядовой' : 
+        damage =  exp > 5 ?  Math.ceil(damage * crit) : damage;
+        console.log('Вы - ' + rank);
+        console.log('Выполняйте приказ! Защитите позицию! Ваш урон ' + damage);
+        break
     case 'сержант' : 
-    console.log('Доложите о готовности! Вы ведущий в бой.')
-    break
-    case 'лейтенант' : 
-    console.log('Ваша задача — координация! Направляйте подразделения.')
-    break
+        damage = 30;
+        damage = exp > 5 ?  Math.ceil(damage * crit) : damage;
+        console.log('Вы - ' + rank);
+        console.log('Доложите о готовности! Вы ведущий в бой. Ваш урон ' + damage)
+        break
+    case 'лейтенант' :
+        damage = 35; 
+        damage = exp > 5 ?  Math.ceil(damage * crit) : damage;
+        console.log('Вы - ' + rank);
+        console.log('Ваша задача — координация! Направляйте подразделения. Ваш урон ' + damage)
+        break
     default : 
-     console.log('Неизвестное звание. Ждите подтверждения...')
+        console.log('Неизвестное звание. Ждите подтверждения...')
 };
