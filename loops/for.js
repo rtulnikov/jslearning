@@ -40,3 +40,17 @@ for(let i in words) {
 console.log(i)
 }
 
+//
+let numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers2 = [];
+
+for(let elem of numbers) {
+numbers2.push(elem);
+}
+console.log(numbers2);
+
+
+// выводим цифры от 10 до 1
+for(let number = 10; number > 0; number-- ) {
+  console.log(number);
+}
