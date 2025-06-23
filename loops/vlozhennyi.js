@@ -27,7 +27,7 @@ for(let j = 0; j < 3; j= j+1) {
 let kakachka = '';
 for(let f = 1; f <= 1; f++) {
   console.log('*');
-for(let h = 1; h <= 4; h++) {
-kakachka += console.log('****')
-}
+    for(let h = 1; h <= 4; h++) {
+        kakachka += console.log('****')
+    }
 }
