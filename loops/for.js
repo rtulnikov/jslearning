@@ -54,3 +54,9 @@ console.log(numbers2);
 for(let number = 10; number > 0; number-- ) {
   console.log(number);
 }
+
+const animals = ['Тигр','Олень', 'Зубр', 'кот', 'пёс', 'Хорек'];
+for(let i = 0; i < animals.length; i += 1) {
+  console.log(animals[i])
+}
+
