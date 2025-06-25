@@ -37,3 +37,15 @@ let str2 = 'говядина';
 let str2Index = Math.floor(Math.random() * str2.length);
 let govydina = str2[str2Index];
 console.log(govydina);
+
+
+
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+while(number < 20){
+    console.log(number[0]);
+    if (number === 14){
+        break
+    } 
+    number++ ;
+}
