@@ -48,11 +48,11 @@ const climb = () =>{
 // 333
 // 4444
 // 55555
-export const fignyi = () =>{
+const fignyi = () =>{
     
     for(let i = 1; i <=5; i++) {
         let laddtr = '';
-        for(let j = 1; j <= i; j++) {
+        for(let j = 1; j < i+1; j++) {
             laddtr += i
             
         }
@@ -61,3 +61,12 @@ export const fignyi = () =>{
 }
 
 // fignyi();
+
+
+const getRandomNumber = () =>{
+    let random = Math.ceil(Math.random() *10);
+    return random;
+}
+
+let rand = getRandomNumber()
+
