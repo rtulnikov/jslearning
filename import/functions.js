@@ -48,11 +48,11 @@ const climb = () =>{
 // 333
 // 4444
 // 55555
-export const fignyi = () =>{
+const fignyi = () =>{
     
     for(let i = 1; i <=5; i++) {
         let laddtr = '';
-        for(let j = 1; j <= i; j++) {
+        for(let j = 1; j < i+1; j++) {
             laddtr += i
             
         }
@@ -61,3 +61,69 @@ export const fignyi = () =>{
 }
 
 // fignyi();
+
+
+const getRandomNumber = () =>{
+    let random = Math.ceil(Math.random() *10);
+    return random;
+}
+
+let rand = getRandomNumber()
+
+//["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+//isMorning()
+//<button style="background-color: blue; color: white;">Нажми меня!</button>
+
+const getDays = () =>{
+    return ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+
+}
+console.log(getDays())
+
+const getButton = () =>{
+    return '<button style="background-color: blue; color: white;">Нажми меня!</button>'
+}
+
+console.log(getButton());
+
+
+
+const isMorning = () =>{
+    let date = new Date().getHours()
+    return date < 10 ?  true : false;
+     
+}
+
+console.log(isMorning())
+
+
+
+const sum = (a, b, c) =>{
+    return a + b + c
+}
+console.log(sum(25, 52, 64))
+
+console.log(sum(82469, 155512))
+
+const maltyplay = (a, b) =>{
+    return a * b
+} 
+
+const stepen = (a, b) =>{
+    return Math.pow(a, b)
+}
+
+console.log(stepen(2, 4))
+
+const animals = ['Тигр','Олень', 'Зубр', 'Хорек'];
+const days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+
+const getArrayElement = (r) =>{
+    const index = Math.floor(Math.random() * r.length)
+    const element = r[index]
+    return element;
+
+}
+
+console.log(getArrayElement(days))
+
