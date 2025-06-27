@@ -1,2 +1,2 @@
-import { fignyi } from "./functions.js";
+import { fignyi} from "./functions.js";
 fignyi();
