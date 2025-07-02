@@ -11,3 +11,14 @@ const bodyParts = ["глаз", "нос", "череп","жопа", "лапки"];
 const [, , ...array ] = bodyParts;
 // console.log(eye, nose);
 console.log(array);
+
+const sum = (...numbers) =>{
+    let pustota = 0;
+    for(let i = 0; i < numbers.length; i++) {
+    pustota += numbers[i]
+    };
+
+    return pustota
+}
+
+console.log(sum(2842512, 25264282, 2568, 242521, 156353165))

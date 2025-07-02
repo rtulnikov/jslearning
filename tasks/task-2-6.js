@@ -11,9 +11,9 @@
 const func = () =>{
     for(let i = 1; i <= 4; i++) {
         let ja = '';
-    for(let g = 1; g <= 4; g++) {
-        ja += '*'
-    }
+        for(let g = 1; g <= 4; g++) {
+            ja += '*'
+        }
     console.log(ja)
 }
 }

@@ -15,3 +15,77 @@ const bodyParts = ["глаз", "нос", "череп","жопа", "лапки"];
 [bodyParts[0], bodyParts[4]] = [bodyParts[4], bodyParts[0]]
 
 console.log(bodyParts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (userGuess === secretNumber) {
+//       alert("Поздравляю! Вы угадали число!");
+//       return;
+//     } else if (userGuess < secretNumber) {
+//       alert("Загаданное число больше.");
+//     } else {
+//       alert("Загаданное число меньше.");
+//     }
