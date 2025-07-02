@@ -102,7 +102,7 @@ const sum = (a, b, c) =>{
     return a + b + c
 }
 console.log(sum(25, 52, 64))
-
+2.2,3
 console.log(sum(82469, 155512))
 
 const maltyplay = (a, b) =>{
@@ -110,10 +110,11 @@ const maltyplay = (a, b) =>{
 } 
 
 const stepen = (a, b) =>{
-    return Math.pow(a, b)
+    return a**b;
 }
+console.log(2**3 + 'арывравв');
 
-console.log(stepen(2, 4))
+console.log(stepen(2,8))
 
 const animals = ['Тигр','Олень', 'Зубр', 'Хорек'];
 const days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
