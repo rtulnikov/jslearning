@@ -1,11 +1,10 @@
 const bodyParts = ["глаз", "нос", "череп","жопа"];
-const adjectives = ["вонючая", "унылая", "дурацкая"];
+const adjectives = ["вонючая", "унылая", "дурацкая", "тупая", "афигевшая"];
 const words = ["муха", "выдра", "дубина", "мартышка", "крыса"];
 
-const sayTeaser = () =>{
-let randomElement = Math.floor(Math.random() * bodyParts.length);
-let element = a[randomElement]
-    return element;
+const sayTeaser = (arrayInFunc) =>{
+let randomElement = arrayInFunc[Math.floor(Math.random() * bodyParts.length)];
+    return randomElement;
 }
 
 
