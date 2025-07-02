@@ -25,20 +25,16 @@
 //     prompt('Ты играешь в игру угадай число от 1 до 10')
 // }
 
-let random = Math.floor(Math.random() * 10 + 1);
-let randomNumber = prompt('угадайте число от 1 до 10');
-// while(random != randomNumber) {
-//     if(random === randomNumber) {
-//     alert('Ты угадал');
-//     };
-//    if(random < randomNumber) {
-//     alert(random)
-//      alert('больше');
-//      prompt('угадай число от 1 до 10');
-//    }else if(random > randomNumber) {
-//     alert(random)
-//     alert('меньше');
-//     prompt('угадай число от 1 до 10');
-//    };
-//    };
+let random = Math.floor(Math.random() * 10) +1;
+let randomNumber = prompt('Угадайте число от 1 до  10');
 
+if(random === randomNumber) {
+    alert('Вы угадали')
+} else if(random < randomNumber) {
+    alert('больше')
+    prompt('Угадайте число от 1 до  10');
+    return;
+} else if(random > randomNumber) {
+    alert('Меньше')
+    return;
+}
