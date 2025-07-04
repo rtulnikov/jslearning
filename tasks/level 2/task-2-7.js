@@ -12,29 +12,36 @@
 Вы угадали!
 */
 
-// let randomNumber = prompt('Ты играешь в игру угадай число от 1 до 10')
-// const random = Math.ceil(Math.random() *10);
+let randomNumber = prompt('Ты играешь в игру угадай число от 1 до 10')
+const random = Math.ceil(Math.random() *10);
 
-// if(randomNumber == random) {
-//     alert('Ты угадал!')
-// } else if(randomNumber < random) {
-//     alert('Лошара! Не угадал! Больше!')
-//     prompt('Ты играешь в игру угадай число от 1 до 10')
-// } else if(randomNumber > random) {
-//     alert('Лопух! Не угадал! Меньше')
-//     prompt('Ты играешь в игру угадай число от 1 до 10')
-// }
+if(randomNumber == random) {
+    alert('Ты угадал!')
+} else if(randomNumber < random) {
+    alert('Лошара! Не угадал! Больше!')
+    prompt('Ты играешь в игру угадай число от 1 до 10')
+} else if(randomNumber > random) {
+    alert('Лопух! Не угадал! Меньше')
+    prompt('Ты играешь в игру угадай число от 1 до 10')
+}
 
-let random = Math.floor(Math.random() * 10) +1;
-let randomNumber = prompt('Угадайте число от 1 до  10');
+let result = Math.floor(Math.random() * 10) + 1;
+console.log(result);
+let userNumber;
+console.log(userNumber);
 
-if(random === randomNumber) {
-    alert('Вы угадали')
-} else if(random < randomNumber) {
-    alert('больше')
-    prompt('Угадайте число от 1 до  10');
-    return;
-} else if(random > randomNumber) {
-    alert('Меньше')
-    return;
+while(result !== userNumber){
+    if(userNumber === null) break;
+
+    userNumber = prompt('Угадайте число от 1 до  10');
+    console.log(userNumber);
+    
+    if(result > userNumber){
+        alert('Больше');
+    } else if(result < userNumber){
+        alert('Меньше');
+    } else{
+        alert("Вы угадали");
+        break;
+    }
 }

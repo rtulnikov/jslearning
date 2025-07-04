@@ -1,7 +1,5 @@
-const getRandomeElement = (array) =>{
-let randomElement = array[Math.floor(Math.random() * array.length)];
-    return randomElement;
-}
+const getRandomeElement = (array) => array[Math.floor(Math.random() * array.length)];
+
 const sayTeaser = () =>{
     const bodyParts = ["глаз", "нос", "череп","жопа"];
     const adjectives = ["вонючая", "унылая", "дурацкая", "тупая", "афигевшая"];
@@ -11,7 +9,10 @@ const sayTeaser = () =>{
 
 }
 
-
+if(true)
+    console.log('Hi, Ratmir');
+else
+    console.log('Bye,Ratmir')
 
 console.log(sayTeaser())
 
