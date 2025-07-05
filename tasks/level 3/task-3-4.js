@@ -1,10 +1,4 @@
-const func = (eter1, eter2) =>{
-    if(eter1 === undefined) {
-        eter1 = 4
-    }
-    if(eter2 === undefined) {
-        eter2 = 4
-    }
+const func = (eter1 = 4, eter2 = 4) =>{
 
     for(let i = 1; i <= eter1; i++) {
         let ja = '';
@@ -14,4 +8,4 @@ const func = (eter1, eter2) =>{
     console.log(ja)
 }
 }
-func(10, 50)
+func()
