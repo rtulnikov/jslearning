@@ -1,17 +1,17 @@
-const func = (eter1, eter2) =>{
-    if(eter1 === undefined) {
-        eter1 = 4
+const func = (num1, num2) =>{
+    if(num1 === undefined) {
+        num1 = 4
     }
-    if(eter2 === undefined) {
-        eter2 = 4
+    if(num2 === undefined) {
+        num2 = 4
     }
 
-    for(let i = 1; i <= eter1; i++) {
-        let ja = '';
-        for(let g = 1; g <= eter2; g++) {
-            ja += '*'
+    for(let i = 1; i <= num1; i++) {
+        let row = '';
+        for(let j = 1; j <= num2; j++) {
+            row += '*'
         }
-    console.log(ja)
+    console.log(row)
 }
 }
-func(10, 50)
+func(1, 1)
