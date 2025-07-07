@@ -28,16 +28,19 @@ function secondRow() {
 }
 
 function sayHello () {
-    let row = '';
-
+    
     for(let i = 1; i <= 6; i++) {
-        
-        
+      let row = '';
         for(let j = 1; j <= 8; j++) {
-           i >= 3 && i < 5 ? row += ' ' : row += '*'; 
+            if(i < 3 || i > 4) {
+                j >= 3 && j < 7 ? row += ' ' : row += '*'; 
+            } else {
+                row += '*';
+            }
         }
-    } 
-    console.log(row)
+        console.log(row);
+    }
+    
 }
 
 sayHello()

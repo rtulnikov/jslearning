@@ -7,4 +7,4 @@ const sumInRange = (minimumNumb, maximumNumb) =>{
   return sum;
 }
 
-console.log(sumInRange(5, 20));
+console.log(sumInRange(1, 3));

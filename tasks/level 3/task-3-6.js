@@ -1,5 +1,5 @@
-const shortenText = (ukorosheniaTexta) =>{
-    let proba = ukorosheniaTexta.slice(0, 99) + '...'
+const shortenText = (str) =>{
+    let proba = str.slice(0, 99) + '...'
     return proba; 
 }
 

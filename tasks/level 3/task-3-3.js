@@ -5,14 +5,11 @@ const sayTeaser = () =>{
     const adjectives = ["вонючая", "унылая", "дурацкая", "тупая", "афигевшая"];
     const words = ["муха", "выдра", "дубина", "мартышка", "крыса"];
 
-    return 'У тебя ' + getRandomeElement(bodyParts)+ ', ' + 'как ' + getRandomeElement(adjectives) + ' ' + getRandomeElement(words);
+    return `У тебя  ${getRandomeElement(bodyParts)}, как ${getRandomeElement(adjectives)} ${getRandomeElement(words)}`;
 
 }
 
-if(true)
-    console.log('Hi, Ratmir');
-else
-    console.log('Bye,Ratmir')
+
 
 console.log(sayTeaser())
 
