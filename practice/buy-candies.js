@@ -1,0 +1,3 @@
+const CHOCOLATE_PRICE = 10;
+const CARAMEL_PRICE = 3;
+const MAX_CHOCOLATES = 5;

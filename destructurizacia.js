@@ -33,7 +33,7 @@ const getNames = () =>{
 const [ratmir, dima] = getNames();
 console.log(ratmir, dima);
 
-const sum = (...numbers) =>{
+const sum2 = (...numbers) =>{
     console.log(numbers); 
 }
-console.log(sum(52, 28, 458, 83, 54))
+console.log(sum2(52, 28, 458, 83, 54))

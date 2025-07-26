@@ -4,8 +4,6 @@ const DRINK_PRICE = 100;
 const pizzaMoney = (count) => PIZZA_PRICE * count;
 const drinkMoney = (count) => DRINK_PRICE * count;
 
-
-
 const order = function (pizzaCount, drinkCount) {
     //используем созданные функции для подчета пиццы и напитков
     // передаем туда количество
@@ -17,5 +15,3 @@ const order = function (pizzaCount, drinkCount) {
 console.log(order(5,2))
 
 console.log(pizzaMoney(3) + drinkMoney(2));
-
-
