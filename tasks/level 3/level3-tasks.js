@@ -35,3 +35,32 @@ showStars(3, 6)
 длины, чтобы дизайн сайта  не разваливался", а на выходе получаем что-то типа:
 "Типичная функция для обрезания текста, котрая используется на многих сай..."
 */
+3.7 /* Создать функцию, которая выводит строку в консоль указанное количество раз. Функция должна принимать два аргумента:
+строку (которую будем выводить) и число (сколько раз ее выводить)
+EASY
+*/
+3.8 /*
+В файле practice/pizza-count.js у нас есть такие функции:
+
+const pizzaMoney = (count) => PIZZA_PRICE * count;
+const drinkMoney = (count) => DRINK_PRICE * count;
+
+const order = function (pizzaCount, drinkCount) {
+    let pizza = pizzaMoney(pizzaCount);
+    let drink = drinkMoney(drinkCount);
+    return pizza + drink;
+}
+Нужно переписать функцию order в стрелочную и написать ее в одну строку
+EASY
+*/
+3.9 /*
+Есть функция, которая возвращает текущую дату в виде массива :
+function getDateParts() {
+  const date = new Date(); // Текущая дата
+  return [date.getDate(), date.getMonth() + 1, date.getFullYear()];
+}
+Нужно через деструктуризацию получить данные из функции и вывести в консоль:
+Сегодняшняя дата: 30.07.2025
+Чтобы все работало нужно функцию getDateParts скопировать в файл с решением задачи.
+EASY
+*/
