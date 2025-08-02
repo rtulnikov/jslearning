@@ -23,3 +23,12 @@ zhopa.fill(2, 4, 8);
 console.log(zhopa);
 zhopa.fill(3);
 console.log(zhopa)
+
+//создание массива из строки через spread оператор
+const str = 'sdjgsl;dsj'
+const array = [...str]
+console.log(array)
+
+//через метод from
+const array2 = Array.from(str)
+console.log(array2)
