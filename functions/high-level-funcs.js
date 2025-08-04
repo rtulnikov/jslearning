@@ -50,11 +50,13 @@ const filter = (array, callback) => {
 };
 
 //создаем фильтрующие стрелочные функции
-const isOdd2 = number => number % 2 != 0;
-const isEven2 = number => number % 2 == 0;
-const lessThanZero2 = number => number < 0;
-const moreThanFive2 = number => number > 5;
+const isOdd2 = (number) => number % 2 != 0;
+const isEven2 = (number) => number % 2 == 0;
+const lessThanZero2 = (number) => number < 0;
+const moreThanFive2 = (number) => number > 5;
 
-console.log(moreThanFive(numbers));
-console.log(isEven(numbers));
+//передаем фильтрующую функцию в качестве callback
+console.log(filter(numbers, lessThanZero));
+
+//мы можем в качестве аргумента передать саму функцию не создавая ее заранее
 console.log(filter(numbers, (number) => number % 2 != 0));
