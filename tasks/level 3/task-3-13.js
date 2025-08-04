@@ -5,5 +5,5 @@ const reverse = (str) => {
 }
     return reverse;
 }
-console.log(reverse('лош'));
+console.log(reverse('Дима'));
 
