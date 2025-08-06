@@ -11,9 +11,9 @@ EASY
 */
 
 function getDateParts() {
-  const date = new Date(); // Текущая дата
+  const date = new Date();
   return [date.getDate(), date.getMonth() + 1, date.getFullYear()];
 }
 
 const [getDate, getMonth, getFullYear] = getDateParts();
-console.log(`Сегодняшняя дата: ${getDate}.${getMonth}.${getFullYear}`);
+let date = `Сегодняшняя дата: ${getDate}.${getMonth}.${getFullYear}` 
