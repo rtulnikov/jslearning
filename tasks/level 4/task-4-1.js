@@ -7,7 +7,7 @@
 EASY
 */
 const numbers = [3, 7, 2, 10, 5, 0, 8];
-const getNumberLessThenMine = (array, number) =>{
+const getNumberLessThenMine = (array, number) =>{ //Указать значение по умолчание = 0
     return array.find((elem) => elem < number);
 }
 
