@@ -6,8 +6,8 @@
 numbers.find( (elem, index) => { ... } );
 */
 
-const numbers = [8, 77, 56, 4, 56];
-const getRepeatedNumber = (Array) => Array.find( (elem, index) => Array.indexOf(elem) !== index )
+const numbers = [8, 77, 56, 4, 56, 4];
+const getRepeatedNumber = (array) =>
+    array.find((elem, index) => array.indexOf(elem) !== index);
 
-
-console.log(getRepeatedNumber(numbers))
+console.log(getRepeatedNumber(numbers));
