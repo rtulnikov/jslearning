@@ -79,4 +79,7 @@ const words = ["apple", "banana", "cherry"];
 // Результат: ["APPLE", "BANANA", "CHERRY"]
 Использовать метод map
 EASY
+
+
+
 */

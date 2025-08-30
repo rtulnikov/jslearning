@@ -13,3 +13,12 @@ const getNumberLessThenMine = (array, number) => {
 };
 
 console.log(getNumberLessThenMine(numbers));
+const letter = "i";
+const str = "string";
+const result = ["_", "_", "_", "_", "_", "_"];
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+        result[i] = letter;
+    }
+}
+console.log(result.join(" "));
