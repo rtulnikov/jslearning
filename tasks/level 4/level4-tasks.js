@@ -33,7 +33,7 @@ HARD
 Пример:
 const words = ["apple", "banana", "Cherry"]; 
 checkCapitalLetter(words) //true
-EASY
+MEDIUM
 
 4.6
 Написать функцию checkLetterInArray(words, letter), которая принимает массив слов и букву. И возвращает, содержат ли все
