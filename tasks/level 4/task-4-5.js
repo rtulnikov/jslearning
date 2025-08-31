@@ -10,9 +10,7 @@ EASY
 const words = ["apple", "banana", "Cherry"]; 
 
 const checkCapitalLetter = (words) =>{
-   return words.some((elem) => {
-        return elem.length > 0 && elem[0] === elem[0].toUpperCase();
-    })
+   return words.some((elem) =>  elem[0] === elem[0].toUpperCase() )
 }
 console.log(checkCapitalLetter(words));
 

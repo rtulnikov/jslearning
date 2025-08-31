@@ -66,5 +66,15 @@ const array = [
   }
 ]
 
+array.push(
+    {
+        name: 'какашка',
+        age: 5,
+        address: ['Яркутск', 'Паловниковый проспект', 23, 4, 58],
+        'номер комнаты': 4,
+    }
+)
+
 console.log(array[3]["номер комнаты"])
 console.log(array[4].address[0])
+console.log(array)
