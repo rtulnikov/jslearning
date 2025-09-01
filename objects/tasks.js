@@ -21,4 +21,5 @@ console.log(array)
 
 // const arr = students.map( (elem) => elem.name )
 
+//получаем массив с именами
 console.log(students.map( (elem) => elem.name ))

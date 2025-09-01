@@ -82,5 +82,5 @@ EASY
 
 4.11
 Прочитать статью https://skillbox.ru/media/code/javascript-objects/
-
+EASY
 */
