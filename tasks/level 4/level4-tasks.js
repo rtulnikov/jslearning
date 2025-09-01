@@ -80,6 +80,7 @@ const words = ["apple", "banana", "cherry"];
 Использовать метод map
 EASY
 
-
+4.11
+Прочитать статью https://skillbox.ru/media/code/javascript-objects/
 
 */
