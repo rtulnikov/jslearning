@@ -1,8 +1,10 @@
 const students = [
   { name: "Анна", age: 20 },
   { name: "Марк", age: 22 },
-  { name: "Юля", age: 19 }
+  { name: "Юля", age: 19 },
+  { name: "Женя", age: 23 },
 ];
+console.log(students)
 
 //сортируем по возрасту
 students.sort( (obj1, obj2) => obj1.age - obj2.age);
