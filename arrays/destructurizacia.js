@@ -48,3 +48,4 @@ const sum2 = (...numbers) =>{
     console.log(numbers); 
 }
 console.log(sum2(52, 28, 458, 83, 54))
+
