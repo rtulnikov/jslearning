@@ -76,11 +76,50 @@ array.push({
 // console.log(array[4].address[0]);
 // console.log(array);
 
-for (let i = 0; i < array.length; i++) {
-    for (let [key, value] of Object.entries(array[i])) {
-        console.log(`${key}: ${value} `);
-    }
+// for (let i = 0; i < array.length; i++) {
+//     for (let [key, value] of Object.entries(array[i])) {
+//         console.log(`${key}: ${value} `);
+//     }
+//     console.log("\n");
+// }
+
+//проходим по всем обьектам массива  и выводим их в виде массива
+// // array.forEach( (elem) => {
+//     // let [key,value] = Object.entries(elem)
+//     // console.log(`${key}: ${value}`)
+//     console.log(Object.entries(elem))
+// })
+
+// let arr = [
+//   [ 'name', 'какашка' ],
+//   [ 'age', 5 ],
+//   [ 'address', [ 'Яркутск', 'Паловниковый проспект', 23, 4, 58 ] ],
+//   [ 'номер комнаты', 4 ]
+// ]
+let arr = Object.entries(array[0]);
+
+// console.log(arr[0][0],arr[0][1])
+// console.log(arr[1][0],arr[1][1])
+// console.log(arr[2][0],arr[2][1])
+// console.log(arr[3][0],arr[3][1])
+
+// for(let i = 0; i < arr.length; i++) {
+//     console.log(arr[i][0],arr[i][1])
+// }
+
+//проходим по массиву и выводим его значения
+// arr.forEach( ([key,value]) => {
+//     console.log(key,value)
+// })
+
+// console.log(Object.entries(array[0]))
+
+array.forEach((elem) => {
+    // let [key,value] = Object.entries(elem)
+    // console.log(`${key}: ${value}`)
+    // console.log(Object.entries(elem))
+    Object.entries(elem).forEach(([key, value]) => {
+        console.log(`${key}: ${value}`);
+    });
     console.log("\n");
-}
-const { age, address } = array[0];
-console.log(age, address);
+});
