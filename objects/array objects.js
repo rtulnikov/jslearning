@@ -121,5 +121,5 @@ array.forEach((elem) => {
     Object.entries(elem).forEach(([key, value]) => {
         console.log(`${key}: ${value}`);
     });
-    console.log("\n");
+    console.log();
 });
