@@ -13,11 +13,27 @@
 MEDIUM
 
 5.2
+В файле array objects.js мы написали код, который обрабатывает массив объектов и выводит все его свойства и их значения:
+array.forEach((elem) => {
+    Object.entries(elem).forEach(([key, value]) => {
+        console.log(`${key}: ${value}`);
+    });
+    console.log();
+});
+Нужно написать функцию getAttributes(arr), которая принимает массив объектов и возвращает все его свойства и значения.
+Вместо
+    Object.entries(elem).forEach(([key, value]) => {
+        console.log(`${key}: ${value}`);
+    });
+использовать цикл for ..in.
+EASY
+
+5.3
 Напишите функцию countProperties(obj), которая принимает объект и возвращает количество его свойств.
 Протестируйте функцию на объекте person.
 MEDIUM
 
-5.3
+5.4
 Создайте функцию createObjectWithDynamicKeys(obj), которая принимает массив строк и возвращает объект, 
 где каждая строка из массива становится ключом, а значение — длиной строки. Например:
 const keys = ["name", "age", "city"];
