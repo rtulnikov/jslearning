@@ -16,7 +16,7 @@ const buyCandies = (money) => {
 //рефакторинг
 const calculateCandies = (money, price, maxCount) => {
     if(money === undefined) {
-        console.log('Где деньги Матроскин')
+        console.log('Где деньги,Лебовски?')
         return false;
     }
     let count = Math.floor(money / price);
