@@ -26,8 +26,8 @@ console.log(allFlat);
 // all.push(birds);
 // all.push('рибо');
 
-// console.log(lastIndex);
-// console.log(all[0][lastIndex]);
+console.log(lastIndex);
+console.log(all[0][lastIndex]);
 
 
 console.log(all[1][4]  + ', ' + all[1][2]);

@@ -25,15 +25,16 @@ for (let key in person) {
   console.log(`${key}:`, person[key]);
 }
 
-Object.entries(newPerson).forEach( ([key, value]) => {
+
+Object.entries(person).forEach( ([key, value]) => {
     console.log(`${key}: ${value}`)
 })
 
-delete person.isStudent
 
 const newPerson = { ...person };
 
-delete person.name;
+
+delete person.isStudent
 
 newPerson.age = 20
 
