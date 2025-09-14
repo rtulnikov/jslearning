@@ -14,30 +14,45 @@
 вывести результат
 */
 const words = ["книга", "стол", "окно", "машина"];
-const word = words[Math.floor(Math.random() * words.length)]
+const word = words[Math.floor(Math.random() * words.length)].toLowerCase();
+let wordLen = word.length;
 
-let result = []
-for(let i = 0; i < word.length; i++){
-    result.push('_')
+
+let result = [];
+for (let i = 0; i < word.length; i++) {
+    result.push("_");
 }
 
-while(result.includes('_')){
-    alert(result.join(' '))
-    const guess = prompt('Введите букву')
-    if(guess == null){
-        alert('Вы вышли из игры')
-        break
+// while (result.includes("_")) {
+while(wordLen > 0){
+    alert(result.join(" "));
+    let guess = prompt("Введите букву");
+
+    if (guess == null) {
+        alert("Вы вышли из игры");
+        break;
     }
-    if(!guess){
-        alert('вы не ввели букву')
+    if (!guess) {
+        alert("вы не ввели букву");
+        continue;
     }
-    if(guess.length > 1){
-        alert('можно только одну букву')
+    if (guess.length > 1) {
+        alert("можно только одну букву");
+        continue;
     }
-    if(word.includes(guess)){
-        alert('Вы угадали')
+    guess = guess.toLowerCase();
+    if (word.includes(guess)) {
+        alert("Вы угадали");
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] === guess) {
+                result[i] = guess;
+                wordLen--
+            }
+        }
+    } else {
+        alert("Вы лошара вы не угадали");
     }
-    if(!word.includes(guess)){
-        alert('Вы лошара вы не угадали')
-    }
+}
+if (!wordLen) {
+    alert(`было загадано слово ${result.join("").toUpperCase()}`);
 }
