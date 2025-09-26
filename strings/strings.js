@@ -32,3 +32,6 @@ const park = "Парк \"Царицыно\"";
 const park2 = `Парк "Царицыно"`;
 const park3 = 'Парк "Царицыно"';
 console.log(park3);
+
+let soroc = 40
+console.log(`Я вешу ${soroc} килограмм`)
