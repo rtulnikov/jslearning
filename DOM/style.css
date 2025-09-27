@@ -1,12 +1,27 @@
 main{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0px auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
+    gap: 10px;
 }
-
+.modal{
+    max-width: 400px;
+    border: 1px solid #bfcb11;
+    border-radius: 4px;
+    background-color: aliceblue;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+}
+.inactive{
+    display: none;
+}
 .btn {
   /* Основные стили */
   padding: 12px 28px;
