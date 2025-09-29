@@ -1,6 +1,6 @@
-const input = document.querySelector("input");
-const result = document.querySelector(".result");
-const button = document.querySelector(".btn");
+// const input = document.querySelector("input");
+// const result = document.querySelector(".result");
+// const button = document.querySelector(".btn");
 
 //выводиим текст из input
 // button.addEventListener("click", () => {
@@ -11,4 +11,11 @@ const button = document.querySelector(".btn");
 button.addEventListener("click", () => {
     result.append(input.value)
     input.value = ''
+
+})
+input.addEventListener("keydown", (event) => {
+    if(event.code === "Enter"){
+        result.append(input.value)
+
+    }
 })
