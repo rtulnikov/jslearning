@@ -9,6 +9,7 @@ main{
     position: relative;
     gap: 10px;
 }
+
 .modal{
     max-width: 400px;
     border: 1px solid #bfcb11;
@@ -62,6 +63,17 @@ main{
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
+}
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    outline: none;
+    width: 150px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 .btn:hover::before {
