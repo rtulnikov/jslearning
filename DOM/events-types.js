@@ -13,30 +13,28 @@ resize — при изменении размера окна браузера.
 
 //DOMContentLoaded - это событие который сробатывает когда прогружается весь html страничкаа и ему пофиг прогрузил он стили и картинки или нет.
 document.addEventListener("DOMContentLoaded", () => {
-        const p = document.querySelector("p")
-    console.log(p)
-    console.log("DOMContentLoaded сработал")
+    const p = document.querySelector("p");
+    console.log(p);
+    console.log("DOMContentLoaded сработал");
 
-p.addEventListener("mouseout", () => {
-    console.log("mouseout сработал")
-})
-p.addEventListener("mouseover", () => {
-    console.log("mouseover сработал")
-})
-p.addEventListener("mousedown", () => {
-    console.log("mousedown сработал")
-
-p.addEventListener("mouseup", () => {
-    console.log("mouseup сработал")
-})
-p.addEventListener("click", () => {
-    console.log("click сработал")
-})
-
-})
-
+    p.addEventListener("mouseout", () => {
+        console.log("mouseout сработал");
+    });
+    p.addEventListener("mouseover", () => {
+        console.log("mouseover сработал");
+    });
+    p.addEventListener("mousedown", () => {
+        console.log("mousedown сработал");
+    });
+    p.addEventListener("mouseup", () => {
+        console.log("mouseup сработал");
+    });
+    p.addEventListener("click", () => {
+        console.log("click сработал");
+    });
+});
 
 //
 window.addEventListener("load", () => {
-    console.log("load сработал")
-})
+    console.log("load сработал");
+});

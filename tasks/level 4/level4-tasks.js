@@ -84,3 +84,4 @@ EASY
 Прочитать статью https://skillbox.ru/media/code/javascript-objects/
 EASY
 */
+
