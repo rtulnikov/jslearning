@@ -14,3 +14,28 @@ h1 {
     max-height: 400px;
     position: relative;
 }
+.ripple {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    animation: rippleEffect 0.8s ease-out;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

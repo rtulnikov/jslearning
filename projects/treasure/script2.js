@@ -7,11 +7,19 @@
     найти расстояние от клика до клада
     в зависимости расстояния пишем холодно или горячо
 если ...
+
+При клику на карту создавать точки в месте клика:
+    создаем элемент - div
+    добавляем ему класс - dot
+    присваиваем координаты клика (из offset), уменьшенные на 2 пикс (чтобы центр был в месте клика)
+    аппендим на карту
+После нахождения клада удаляем возможность создавать точки на карте
 */
 
 const maxWeight = 400;
 const maxHeight = 400;
 const map = document.querySelector(".picture");
+
 const message = document.querySelector(".message");
 
 const treusure = {
@@ -40,17 +48,18 @@ function handleClick(event) {
         clue = "ультра  холодно";
     } else if (distance >= 100) {
         clue = "теплее";
-    } else if (distance >= 50){
+    } else if (distance >= 30) {
         clue = "горячо";
     } else if (distance >= 10) {
         clue = "горим";
-    }else   {
+    } else {
         clue = "клад найден! Вы справились за " + click + " попыток";
         getTreasure();
         map.removeEventListener("click", handleClick);
     }
 
     message.innerText = clue;
+    return true;
 }
 
 let click = 0;
