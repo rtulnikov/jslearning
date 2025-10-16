@@ -27,6 +27,20 @@ const treusure = {
     y: Math.floor(Math.random() * maxHeight),
 };
 
+function createDot (event){
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dot.style.top = event.offsetY - 2 + "px";
+    dot.style.left = event.offsetX - 2 + "px";
+    map.appendChild(dot);
+
+    const wave = document.createElement("div");
+    wave.classList.add("ripple");
+    wave.style.top = event.offsetY - 10 + "px";
+    wave.style.left = event.offsetX - 10 + "px";
+    map.append(wave);
+} 
+
 const getTreasure = () => {
     let img = document.createElement("img");
     img.src = "img/treasure.png";
@@ -56,6 +70,9 @@ function handleClick(event) {
         clue = "клад найден! Вы справились за " + click + " попыток";
         getTreasure();
         map.removeEventListener("click", handleClick);
+        map.removeEventListener("mousedown", createDot);
+        const dots = document.querySelectorAll(".dot");
+        dots.forEach((dot) => dot.remove());
     }
 
     message.innerText = clue;
@@ -64,3 +81,4 @@ function handleClick(event) {
 
 let click = 0;
 map.addEventListener("click", handleClick);
+map.addEventListener("mousedown",createDot);
