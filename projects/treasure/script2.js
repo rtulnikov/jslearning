@@ -35,7 +35,7 @@ function createDot(event) {
     dot.style.left = event.offsetX - 2 + "px";
     map.appendChild(dot);
 
-    //удаляем черех 10 секкунд
+    //удаляем черех 10 секкунд 
     setTimeout( () => {
         dot.remove()
     }, 10000 )
