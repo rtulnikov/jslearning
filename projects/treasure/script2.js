@@ -8,7 +8,7 @@
     в зависимости расстояния пишем холодно или горячо
 если ...
 
-При клику на карту создавать точки в месте клика:
+При клике на карту создавать точки в месте клика:
     создаем элемент - div
     добавляем ему класс - dot
     присваиваем координаты клика (из offset), уменьшенные на 2 пикс (чтобы центр был в месте клика)
@@ -26,7 +26,15 @@ const treusure = {
     x: Math.floor(Math.random() * maxWeight),
     y: Math.floor(Math.random() * maxHeight),
 };
-
+function createDot (event) {
+    const dot
+}
+map.addEventListener("click", (event) =>{
+    const dot = document.querySelector(".dot");
+    dot.style.top = event.offsetY - 2 + "px"
+    dot.style.left = event.offsetX - 2 + "px"
+    map.append(dot)
+})
 const getTreasure = () => {
     let img = document.createElement("img");
     img.src = "img/treasure.png";
