@@ -20,6 +20,7 @@ const maxWeight = 400;
 const maxHeight = 400;
 const map = document.querySelector(".picture");
 
+
 const message = document.querySelector(".message");
 
 const treusure = {
@@ -27,19 +28,29 @@ const treusure = {
     y: Math.floor(Math.random() * maxHeight),
 };
 
-function createDot (event){
+function createDot(event) {
     const dot = document.createElement("div");
     dot.classList.add("dot");
     dot.style.top = event.offsetY - 2 + "px";
     dot.style.left = event.offsetX - 2 + "px";
     map.appendChild(dot);
 
+    //удаляем черех 10 секкунд
+    setTimeout( () => {
+        dot.remove()
+    }, 10000 )
+
     const wave = document.createElement("div");
     wave.classList.add("ripple");
-    wave.style.top = event.offsetY - 10 + "px";
-    wave.style.left = event.offsetX - 10 + "px";
+    wave.style.top = event.offsetY - 5 + "px";
+    wave.style.left = event.offsetX - 5 + "px";
     map.append(wave);
-} 
+
+    //удалям по окончании анимации
+    wave.addEventListener("animationend", () => {
+        wave.remove()
+    })
+}
 
 const getTreasure = () => {
     let img = document.createElement("img");
@@ -56,7 +67,7 @@ function handleClick(event) {
     const difX = event.offsetX - treusure.x;
     const difY = event.offsetY - treusure.y;
     const distance = Math.floor(Math.sqrt(difX * difX + difY * difY));
-
+    
     let clue = "";
     if (distance >= 200) {
         clue = "ультра  холодно";
@@ -81,4 +92,4 @@ function handleClick(event) {
 
 let click = 0;
 map.addEventListener("click", handleClick);
-map.addEventListener("mousedown",createDot);
+map.addEventListener("mousedown", createDot);
