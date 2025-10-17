@@ -81,6 +81,9 @@ function handleClick(event) {
         clue = "клад найден! Вы справились за " + click + " попыток";
         getTreasure();
         map.removeEventListener("click", handleClick);
+        map.removeEventListener("mousedown", createDot);
+        const dots = document.querySelectorAll(".dot");
+        dots.forEach((dot) => dot.remove());
     }
 
     message.innerText = clue;
