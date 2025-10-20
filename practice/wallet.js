@@ -2,31 +2,44 @@ const wallet = {
     balance: 0,
     operations: [],
     increase(number, operation) {
-        wallet.operations.push({reson: operation, sum: number})
-       return  wallet.balance += number
+        this.operations.push({ reson: operation, sum: number });
+        return (this.balance += number);
     },
     reduce(number, operation) {
-        if(wallet.balance < number){
-             wallet.operations.push({alert: "недостаточно средств", sum: -number}) 
-            return false
-        }else{
-        wallet.operations.push({reson:  operation, sum: -number})
-         wallet.balance -= number
-        return true
-        }
+        if (this.balance < number) {
+            this.operations.push({
+                alert: "недостаточно средств",
+                sum: -number,
+            });
+            return false;
+        } 
+        this.operations.push({ reson: operation, sum: -number });
+        this.balance -= number;
+        return true;
     },
-    getOperations(){
-       return  wallet.operations
+    getOperations() {
+        return this.operations;
     },
-    getBalance(){
-        return wallet.balance;
+    getBalance() {
+        return this.balance;
     },
-}
-wallet.increase(5156,"зарплата")
-console.log(wallet.operations)
-console.log(wallet.balance)
-wallet.reduce(6450, "покупка кофеварки")
-console.log(wallet.operations)
-console.log(wallet.balance)
-console.log(wallet.getOperations())
-console.log(wallet.getBalance())
+    getAlert(){
+        return this.operations.filter( (obj) => obj.hasOwnProperty('alert') )
+    },
+    getAlert2(){
+        return this.operations.filter( (obj) =>{
+            return 'alert' in obj
+        })
+    },
+};
+
+wallet.increase(5156, "зарплата");
+console.log(wallet.operations);
+console.log(wallet.balance);
+wallet.reduce(6450, "покупка кофеварки");
+wallet.reduce(6350, "покупка кофеварки");
+console.log(wallet.operations);
+console.log(wallet.balance);
+console.log(wallet.getOperations());
+console.log(wallet.getAlert2())
+console.log(this)
