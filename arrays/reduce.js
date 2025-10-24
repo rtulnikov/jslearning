@@ -12,7 +12,7 @@ console.log(
 );
 let avg = numbers.reduce((acc, elem, index) => {
     console.log(acc, elem, index);
-    if (index == 4) {
+    if (index == numbers.length - 1) {
         return (acc + elem) / numbers.length;
     } else {
         return acc + elem;

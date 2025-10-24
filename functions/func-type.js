@@ -15,3 +15,8 @@ console.log(sum1(243, 2215))
 function sum2 (a,b) {
     return a + b;
 } 
+
+//Imidiate Invoked Function Expression (IIFE)
+(function() {
+    console.log("Hello, Ratmir!");
+})()

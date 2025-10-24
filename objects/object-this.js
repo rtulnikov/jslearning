@@ -48,7 +48,22 @@ adminRun()
 const userWalk = userActions.walk.bind(user)
 setTimeout(userWalk, 3000);
 
-function test() {
-    user.run();
-    admin.walk();
+
+const italianChef = {
+  name: "Марко",
+  specialty: "итальянская кухня",
+  cookingTime: 20
+};
+
+const japaneseChef = {
+  name: "Такеши",
+  specialty: "японская кухня",
+  cookingTime: 15
+};
+
+function cookDish(dish, ingredients) {
+  console.log(`Повар ... готовит ...`);
+  console.log(`Ингредиенты: ...}`);
+  console.log(`Время приготовления: ... минут\n`);
+  return `... готов!`;
 }

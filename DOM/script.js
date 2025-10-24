@@ -14,4 +14,21 @@ const getRandomColor = () => {
 paragraph.addEventListener("click", () => {
     paragraph.style.backgroundColor = getRandomColor();
 });
+//не перезаписывает действие
+paragraph.addEventListener("click", () => {
+    paragraph.classList.add('class');
+});
 
+//альтернативный вариант
+paragraph.onclick = function(){
+     paragraph.style.backgroundColor = getRandomColor();
+     //придется добавлять свои функции сюда
+    //  addClassList();
+}
+//перезапишет действие
+paragraph.onclick = function(){
+     paragraph.classList.add('class');
+}
+function addClassList(){
+    //...
+}
