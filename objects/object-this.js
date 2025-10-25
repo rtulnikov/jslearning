@@ -16,8 +16,8 @@ const ratmir = {
 // console.log(dima.greet());
 
 const userActions = {
-    run: function () {
-        console.log(this.name + " бежит");
+    run: function (dest,how) {
+        console.log(`${this.name} бежит ${dest} ${how}`);
     },
     walk() {
         console.log(this.name + " идет");
@@ -38,14 +38,18 @@ const admin = {
 const moderator = {
     name: "Коля",
     role: "moderator",
-    run: userActions.run,
-    walk: userActions.walk,
+    // run: userActions.run,
+    // walk: userActions.walk,
 };
 admin.run();
 //Привязываем метод к обьекту admin
 const adminRun = userActions.run.bind(admin)
 adminRun()
 const userWalk = userActions.walk.bind(user)
+
+userActions.run.call(moderator,'в магазин', 'быстро')
+userActions.run.apply(moderator,['в школу','нехотя'])
+
 setTimeout(userWalk, 3000);
 
 
@@ -62,8 +66,16 @@ const japaneseChef = {
 };
 
 function cookDish(dish, ingredients) {
-  console.log(`Повар ... готовит ...`);
-  console.log(`Ингредиенты: ...}`);
-  console.log(`Время приготовления: ... минут\n`);
-  return `... готов!`;
+  console.log(`Повар ${this.name} готовит ${dish}`);
+  console.log(`Ингредиенты: ${ingredients.join(', ')}`);
+  console.log(`Время приготовления: ${this.cookingTime} минут`);
+   console.log(`${dish} готово! \n`);
+   return true
 }
+cookDish.call(italianChef,'фетуччини',['спагетти','вечина','сливки'])
+cookDish.apply(japaneseChef,['суши',['рыба','рис','морская капуста']])
+
+const coockSushi = cookDish.bind(japaneseChef,'суши',['рыба','рис','морская капуста'])
+coockSushi()
+setTimeout( coockSushi, 3000)
+
