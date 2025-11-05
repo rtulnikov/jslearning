@@ -46,9 +46,7 @@ body{
     cursor: pointer;
 }
 
-.menu__item img{
 
-}
 
 .menu__item:hover{
     background: #6A6AFB
@@ -129,7 +127,7 @@ h1{
 
 .progress__cover-bar{
     position: absolute;
-    width: 50%;
+    transition: all 0.5s;
     height: 5px;
     border-radius: 4px;
     background: #5051F9;
@@ -193,11 +191,15 @@ input{
     color: #8899A8;
 }
 
+input.error{
+    border: 1px solid red;
+}
+
 .habbit__form{
     display: flex;
     gap: 15px;
     width: 100%;
-    padding: 0px 25px; 
+    padding: 0px 10px 0px 25px; 
     position: relative;
 }
 
