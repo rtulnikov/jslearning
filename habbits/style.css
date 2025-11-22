@@ -45,9 +45,6 @@ body{
     width: 45px;
     cursor: pointer;
 }
-
-
-
 .menu__item:hover{
     background: #6A6AFB
 }
@@ -122,11 +119,11 @@ h1{
     background: #E6E9ED;
     border-radius: 4px;
     height: 5px;
-    position: relative;
+    /* position: relative; */
 }
 
 .progress__cover-bar{
-    position: absolute;
+    /* position: absolute; */
     transition: all 0.5s;
     height: 5px;
     border-radius: 4px;
