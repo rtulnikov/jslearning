@@ -24,13 +24,16 @@ body {
 .logo {
     margin-bottom: 40px;
 }
-.add {
+.menu__add {
     height: 45px;
     width: 45px;
     background: none;
     cursor: pointer;
     border-radius: 14px;
     border: 1px solid #cad5ff;
+}
+.menu__add:hover{
+    background: #E7EBFF;
 }
 nav {
     display: flex;
@@ -126,15 +129,46 @@ main{
     margin: 10px;
     background: white;
     border-radius: 10px;
+    align-items: center;
+}
+.habbit__comment{
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #E7EBFF;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Comfortaa', sans-serif;
+    line-height: 16px;
 }
 .habbit__day{
-    padding: 10px;
     background: #FBFAFF;
     font-size: 14px;
     padding: 20px 40px;
     border-right: 1px solid #E7EBF8;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    min-width: 140px;
+}
+.habbit__icon{
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+.habbit__submit{
+    background: #EDECFE;
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: #5051F9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.habbit__submit:hover{
+    background: #dcdaff;
+}
+input.icon{
+    padding-left: 50px;
 }
 .habbit__text{
     flex: 1;
@@ -145,14 +179,17 @@ main{
     background: none;
     border: none;
     cursor: pointer;
-    border-radius: 10px;
-    padding: 14px 30px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 10px;
 }
 .delete:hover{
     background: #dcdaff;
 }
 .habbit__form{
+    width: 100%;
     display: flex;
     gap: 10px;
     padding: 0px 10px 0px 25px;
+    position: relative;
 }
