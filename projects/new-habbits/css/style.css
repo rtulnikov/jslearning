@@ -50,10 +50,10 @@ body {
     background: none;
     cursor: pointer;
     border-radius: 14px;
-    border: 1px solid #cad5ff;
+    border: 1px solid var(--add-btn-border);
 }
 .menu__add:hover {
-    background: #e7ebff;
+    background: var(--add-btn-hover);
 }
 nav {
     display: flex;
@@ -63,28 +63,28 @@ nav {
 }
 .menu__item {
     background: #ffffff;
-    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    box-shadow: var(--left-btn-shadow);
     border-radius: 14px;
     border: none;
     height: 45px;
     width: 45px;
     cursor: pointer;
 }
-.menu__item:hover {
-    background: #6a6afb;
+.menu__item:hover, .popup__icon-active:hover, .popup__icons:hover {
+    background: var(--left-btn-hover);
 }
-.menu__item:hover img {
+.menu__item:hover img, .popup__icons:hover img {
     filter: brightness(0) invert(1);
 }
 .menu__item-active {
-    background: #5051f9;
+    background: var(--item-active);
 }
-.menu__item-active img {
+.menu__item-active img, .popup__icon-active img {
     filter: brightness(0) invert(1);
 }
 
 .add_habbit {
-    color: #474b5e;
+    color: var(--add-habbit-text);
     font-size: 10px;
     max-width: 50px;
     margin-top: -10px;
@@ -121,40 +121,40 @@ main {
 .progress__name {
     font-size: 14px;
     line-height: 16px;
-    color: #232360;
+    color: var(--progress-name);
 }
 .progress__percent {
     font-size: 12px;
     line-height: 13px;
-    color: #768396;
+    color: var(--progress-persent);
 }
 
 .progress__bar {
     height: 5px;
     width: 100%;
-    background: #e6e9ed;
+    background: var(--progress-bar);
     border-radius: 5px;
 }
 .progress__active {
     transition: all 0.5s;
     height: 5px;
-    background: #5051f9;
+    background: var(--item-active);
     width: 10%;
     border-radius: 5px;
 }
 
 .habbit {
     display: flex;
-    margin: 10px;
+    margin-bottom: 12px;
     background: white;
     border-radius: 10px;
     align-items: center;
 }
-.habbit__comment {
+input {
     flex-grow: 1;
     padding: 12px 20px;
     border-radius: 5px;
-    border: 1px solid #e7ebff;
+    border: 1px solid var(--add-btn-hover);
     outline: none;
     font-size: 14px;
     font-family: "Comfortaa", sans-serif;
@@ -164,7 +164,7 @@ main {
     background: var(--day-background);
     font-size: 14px;
     padding: 20px 40px;
-    border-right: 1px solid #e7ebf8;
+    border-right: 1px solid var(--day-right-border);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     min-width: 140px;
@@ -175,16 +175,16 @@ main {
     left: 45px;
 }
 .habbit__submit {
-    background: #edecfe;
+    background: var(--submit-background);
     border: none;
     padding: 10px 20px;
     font-size: 13px;
-    color: #5051f9;
+    color: var(--item-active);
     border-radius: 10px;
     cursor: pointer;
 }
 .habbit__submit:hover {
-    background: #dcdaff;
+    background: var(--sbmt-btn-hover);
 }
 input.icon {
     padding-left: 50px;
@@ -203,7 +203,7 @@ input.icon {
     margin-right: 10px;
 }
 .delete:hover {
-    background: #dcdaff;
+    background: var(--sbmt-btn-hover);
 }
 .habbit__form {
     width: 100%;
@@ -211,4 +211,60 @@ input.icon {
     gap: 10px;
     padding: 0px 10px 0px 25px;
     position: relative;
+}
+.cover{
+    background: rgba(0, 0, 0, 0.25);
+    inset: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    max-width: 600px;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.popup__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.popup__form input{
+    width: 100%;
+}
+.icons__select{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.popup__icons{
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid var(--item-active);
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+.popup__icon-active {
+    background: var(--item-active);
+}
+.popup__cross{
+    position: absolute;
+    border: none;
+    background: none;
+    top: 15px;
+    right: 15px;
+}
+.popup__form-btn{
+    padding: 14px 30px;
 }
