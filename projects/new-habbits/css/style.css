@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+aside {
+    background: white;
+    padding: 30px;
+}
+body {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    background-color: #F3F6FD;
+    font-weight: 400;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.logo {
+    margin-bottom: 40px;
+}
+.add {
+    height: 45px;
+    width: 45px;
+    background: none;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #cad5ff;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.menu__item {
+    background: #ffffff;
+    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    border-radius: 14px;
+    border: none;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+.menu__item:hover {
+    background: #6a6afb;
+}
+.menu__item:hover img {
+    filter: brightness(0) invert(1);
+}
+.menu__item-active {
+    background: #5051f9;
+}
+.menu__item-active img {
+    filter: brightness(0) invert(1);
+}
+
+.add_habbit {
+    color: #474b5e;
+    font-size: 10px;
+    max-width: 50px;
+    margin-top: -10px;
+}
+
+.wrapper{
+    min-width: 900px;
+    padding:45px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    line-height: 40px;
+    max-width: 560px;
+    margin: 0px;
+
+}
+main{
+    margin-top: 40px;
+}
+.progress{
+    min-width: 225px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.progress__text{
+    display: flex;
+    justify-content: space-between;
+}
+.progress__name{
+    font-size: 14px;
+    line-height: 16px;
+    color: #232360;
+}
+.progress__percent{
+    font-size: 12px;
+    line-height: 13px;
+    color: #768396;
+}
+
+.progress__bar{
+    height: 5px;
+    width: 100%;
+    background: #E6E9ED;
+    border-radius: 5px;
+    
+}
+.progress__active{
+    transition: all 0.5s;
+    height: 5px;
+    background: #5051f9;
+    width: 10%;
+    border-radius: 5px;
+}
+
+.habbit{
+    display: flex;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+}
+.habbit__day{
+    padding: 10px;
+    background: #FBFAFF;
+    font-size: 14px;
+    padding: 20px 40px;
+    border-right: 1px solid #E7EBF8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.habbit__text{
+    flex: 1;
+    font-size: 14px;
+    padding: 20px 25px;
+}
+.delete{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 14px 30px;
+}
+.delete:hover{
+    background: #dcdaff;
+}
+.habbit__form{
+    display: flex;
+    gap: 10px;
+    padding: 0px 10px 0px 25px;
+}
