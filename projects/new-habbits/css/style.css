@@ -1,3 +1,23 @@
+:root {
+    --font-main: "Comfortaa", sans-serif;
+
+    --main-background: #f3f6fd;
+    --day-background: #fbfaff;
+    --day-right-border: #e7ebf8;
+    --submit-background: #edecfe;
+    --item-active: #5051f9; /*У кнопки "Готово" это цвет текста*/
+    --left-btn-hover: #6a6afb;
+    --add-btn-hover: #e7ebff; /*этот же цвет у границы инпута Комментария*/
+    --add-btn-border: #cad5ff;
+    --sbmt-btn-hover: #dcdaff; /*он же ховер у кнопки удаления*/
+
+    --add-habbit-text: #474b5e;
+    --progress-name: #232360;
+    --progress-persent: #768396;
+    --progress-bar: #e6e9ed;
+
+    --left-btn-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+}
 * {
     box-sizing: border-box;
 }
@@ -11,9 +31,9 @@ aside {
     padding: 30px;
 }
 body {
-    font-family: 'Comfortaa', cursive;
+    font-family: var(--font-main);
     margin: 0;
-    background-color: #F3F6FD;
+    background-color: var(--main-background);
     font-weight: 400;
 }
 .menu {
@@ -24,13 +44,16 @@ body {
 .logo {
     margin-bottom: 40px;
 }
-.add {
+.menu__add {
     height: 45px;
     width: 45px;
     background: none;
     cursor: pointer;
     border-radius: 14px;
-    border: 1px solid #cad5ff;
+    border: 1px solid var(--add-btn-border);
+}
+.menu__add:hover {
+    background: var(--add-btn-hover);
 }
 nav {
     display: flex;
@@ -40,119 +63,208 @@ nav {
 }
 .menu__item {
     background: #ffffff;
-    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    box-shadow: var(--left-btn-shadow);
     border-radius: 14px;
     border: none;
     height: 45px;
     width: 45px;
     cursor: pointer;
 }
-.menu__item:hover {
-    background: #6a6afb;
+.menu__item:hover, .popup__icon-active:hover, .popup__icons:hover {
+    background: var(--left-btn-hover);
 }
-.menu__item:hover img {
+.menu__item:hover img, .popup__icons:hover img {
     filter: brightness(0) invert(1);
 }
 .menu__item-active {
-    background: #5051f9;
+    background: var(--item-active);
 }
-.menu__item-active img {
+.menu__item-active img, .popup__icon-active img {
     filter: brightness(0) invert(1);
 }
 
 .add_habbit {
-    color: #474b5e;
+    color: var(--add-habbit-text);
     font-size: 10px;
     max-width: 50px;
     margin-top: -10px;
 }
 
-.wrapper{
+.wrapper {
     min-width: 900px;
-    padding:45px;
+    padding: 45px;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
 }
-h1{
+h1 {
     line-height: 40px;
     max-width: 560px;
     margin: 0px;
-
+    font-weight: 600;
 }
-main{
+main {
     margin-top: 40px;
 }
-.progress{
+.progress {
     min-width: 225px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.progress__text{
+.progress__text {
     display: flex;
     justify-content: space-between;
 }
-.progress__name{
+.progress__name {
     font-size: 14px;
     line-height: 16px;
-    color: #232360;
+    color: var(--progress-name);
 }
-.progress__percent{
+.progress__percent {
     font-size: 12px;
     line-height: 13px;
-    color: #768396;
+    color: var(--progress-persent);
 }
 
-.progress__bar{
+.progress__bar {
     height: 5px;
     width: 100%;
-    background: #E6E9ED;
+    background: var(--progress-bar);
     border-radius: 5px;
-    
 }
-.progress__active{
+.progress__active {
     transition: all 0.5s;
     height: 5px;
-    background: #5051f9;
+    background: var(--item-active);
     width: 10%;
     border-radius: 5px;
 }
 
-.habbit{
+.habbit {
     display: flex;
-    margin: 10px;
+    margin-bottom: 12px;
     background: white;
     border-radius: 10px;
+    align-items: center;
 }
-.habbit__day{
-    padding: 10px;
-    background: #FBFAFF;
+input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--add-btn-hover);
+    outline: none;
+    font-size: 14px;
+    font-family: "Comfortaa", sans-serif;
+    line-height: 16px;
+}
+.habbit__day {
+    background: var(--day-background);
     font-size: 14px;
     padding: 20px 40px;
-    border-right: 1px solid #E7EBF8;
+    border-right: 1px solid var(--day-right-border);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    min-width: 140px;
 }
-.habbit__text{
+.habbit__icon {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+.habbit__submit {
+    background: var(--submit-background);
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: var(--item-active);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.habbit__submit:hover {
+    background: var(--sbmt-btn-hover);
+}
+input.icon {
+    padding-left: 50px;
+}
+.habbit__text {
     flex: 1;
     font-size: 14px;
     padding: 20px 25px;
 }
-.delete{
+.delete {
     background: none;
     border: none;
     cursor: pointer;
-    border-radius: 10px;
-    padding: 14px 30px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 10px;
 }
-.delete:hover{
-    background: #dcdaff;
+.delete:hover {
+    background: var(--sbmt-btn-hover);
 }
-.habbit__form{
+.habbit__form {
+    width: 100%;
     display: flex;
     gap: 10px;
     padding: 0px 10px 0px 25px;
+    position: relative;
+}
+.cover{
+    background: rgba(0, 0, 0, 0.25);
+    inset: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    max-width: 600px;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.popup__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.popup__form input{
+    width: 100%;
+}
+.icons__select{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.popup__icons{
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid var(--item-active);
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+.popup__icon-active {
+    background: var(--item-active);
+}
+.popup__cross{
+    position: absolute;
+    border: none;
+    background: none;
+    top: 15px;
+    right: 15px;
+}
+.popup__form-btn{
+    padding: 14px 30px;
 }
