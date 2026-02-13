@@ -268,3 +268,6 @@ input.icon {
 .popup__form-btn{
     padding: 14px 30px;
 }
+.hidden{
+    display: none;
+}

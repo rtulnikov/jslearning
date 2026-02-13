@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- <script src="script.js" defer></script> -->
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn">Clicked<span></span></button>
+        <style>
+            button{
+                padding: 10px 20px;
+                background: orange;
+                color: rgb(73, 72, 75);
+                font-size: 16px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover{
+                opacity: 90%;
+            }
+        </style>
+        <script>
+            const btn = document.querySelector("button");
+            const clicksNumber = document.querySelector("button span");
+            let count = 0;
+            btn.addEventListener("click", () => {
+                count++;
+                let str = count > 1 ? "times" : "time";
+                clicksNumber.textContent = ` ${count} ${str}`;
+            });
+        </script>         
+    </body>
+</html>
