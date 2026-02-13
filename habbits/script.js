@@ -43,12 +43,43 @@ function togglePopup() {
 //     if(e.target "div.popup") page.popup.index.classList.toggle("cover_hidden");
 // });
 
-function rerenderMenu(activeHabbit) {
-    for (const habbit of habbits) {
-        const existed = document.querySelector(
-            `[menu-habbit-id="${habbit.id}"]`
-        );
-        if (!existed) {
+function resetForm(form, fields){
+      for(let field of fields){
+       form[field].value = '';
+
+    }
+}
+
+function validateAndGetFormData(form, fields){
+    const formData = new FormData(form);
+    const res={};
+    for(let field of fields){
+        const fieldValue = formData.get(field);
+        form[field].classList.remove('error');
+
+        if(!fieldValue){
+            form[field].classList.add('error');
+        return;
+    }
+    res[field] = fieldValue;
+    }
+    let isValid = true;
+    for(let field of fields){
+        if(!res[field]){
+            isValid = false;
+        }
+    }
+    if(!isValid){
+        return; 
+    }
+    console.log(res)
+    return res;
+}
+
+function rerenderMenu(activeHabbit){
+    for(const habbit of habbits){
+        const existed = document.querySelector(`[menu-habbit-id="${habbit.id}"]`)
+        if(!existed){
             //создание
             const element = document.createElement("button");
             element.setAttribute("menu-habbit-id", habbit.id);
@@ -108,11 +139,12 @@ function rerender(activeHabbitId) {
     if (!activeHabbit) {
         return;
     }
-
+    document.location.replace(document.location.pathname + '#' + activeHabbitId)
     rerenderMenu(activeHabbit);
     rerenderHead(activeHabbit);
     rerenderContent(activeHabbit);
 }
+
 
 function addDays(event) {
     const form = event.target;
@@ -122,17 +154,21 @@ function addDays(event) {
     form["comment"].classList.remove("error");
     if (!comment) {
         form["comment"].classList.add("error");
+
         return;
     }
     habbits = habbits.map((habbit) => {
         if (habbit.id === globalActiveHabbitId) {
             return {
                 ...habbit,
-                days: habbit.days.concat([{ comment }]),
-            };
+
+                days: habbit.days.concat([{comment: data.comment}])
+            }
         }
         return habbit;
-    });
+    })
+    resetForm(event.target, ['comment']);
+
     form["comment"].value = "";
     rerender(globalActiveHabbitId);
     saveData();
@@ -153,7 +189,47 @@ function deleteDay(index) {
     saveData();
 }
 
-(() => {
-    loadData();
-    rerender(habbits[0].id);
+
+function setIcon(context, icon){
+    page.popup.iconField.value = icon;
+    const activeIcon = document.querySelector(".icon.icon_active");
+    activeIcon.classList.remove("icon_active");
+    context.classList.add("icon_active");
+};
+
+function addHabbit(event){
+    event.preventDefault();
+    const data = validateAndGetFormData(event.target, ['name', 'icon', 'target']);
+    console.log("g")
+    if(!data){
+        return;
+    }
+
+    const maxId = habbits.reduce((acc, habbit)=> acc > habbit.id ? acc : habbit.id, 0);
+
+    habbits.push({
+        id: maxId + 1,
+        name: data.name,
+        target: data.target,
+        icon: data.icon,
+        days: [],
+    });
+    
+    resetForm(event.target, ['name', 'target']);
+    togglePopup();
+    saveData();
+    rerender(maxId + 1)
+    
+}
+
+( () =>{
+    loadData()
+    const hashId = Number(document.location.hash.replace('#', ''));
+    const urlHabbit = habbits.find((habbit) => habbit.id == hashId);
+    if(urlHabbit){
+       rerender(urlHabbit.id);
+    }else{
+        rerender(habbits[0].id);
+    }
+   
 })();
