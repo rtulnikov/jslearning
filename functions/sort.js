@@ -31,3 +31,18 @@ let b = 2;
 
 [a, b] = [b, a];
 console.log(a, b);
+
+const array = [20, 5, 25, 0, 55, 5];
+
+function selectionSort(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        let smi = i;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[smi] > arr[j]) smi = j;
+        }
+        if (smi != i) [arr[i], arr[smi]] = [arr[smi], arr[i]];
+    }
+    return arr;
+}
+console.log(selectionSort(array));
+
