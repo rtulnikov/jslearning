@@ -33,7 +33,6 @@
 // }
 // console.log(otris(arrOtris));
 
-
 // let num = 47;
 // num += 7;
 // num -= 18;
@@ -77,28 +76,19 @@
 // let obj = {
 // 	'1a': 1,
 // 	b2: 2,
-// 	'c-c': 3, 
+// 	'c-c': 3,
 // 	'd 4': 4,
 // 	e5: 5
 // };
 
-let key = 'x';
+let key = "x";
 
-
-// obj['x'] *= obj['x'] 
-// obj['y'] *= obj['y'] 
+// obj['x'] *= obj['x']
+// obj['y'] *= obj['y']
 // obj['z'] *= obj['z']
 
 // console.log(obj)
 // console.log(obj[key])
-
-
-// let key1 = '1x';
-// let key2 = 'y';
-// let key3 = 'z';
-
-// let obj = {[key1]: key1, [key2]: 2, [key3]: 3};
-
 
 // console.log(obj)
 
@@ -122,22 +112,63 @@ let key = 'x';
 // 	console.log('---');
 // }
 
-
 // let test1 = true;
 // let test2 = true;
 
 // console.log(!!test1 && test2 ? true : false)
 
-let day = 20;
+// let day = 20;
 
-if(day >= 1 && day <= 31){
-  if(day <= 10) {
-    console.log('в первую декаду')
-}else if (day <= 20){
-    console.log('в вторую декаду')
-}else{
-    console.log('в третью декаду')
-}  
-}else{
-    console.log('ошибка')
-}
+// if(day >= 1 && day <= 31){
+//   if(day <= 10) {
+//     console.log('в первую декаду')
+// }else if (day <= 20){
+//     console.log('в вторую декаду')
+// }else{
+//     console.log('в третью декаду')
+// }
+// }else{
+//     console.log('ошибка')
+// }
+
+
+// if (lang == 'ru') {
+// 	console.log('rus');
+// } else if (lang == 'en') {
+// 	console.log('eng');
+// } else if (lang == 'de') {
+// 	console.log('deu');
+// } else {
+// 	console.log('language not supported');
+// }
+
+// let lang = "de";
+
+// switch (lang) {
+//   case "ru":
+//     console.log("rus");
+//     break;
+//   case "en":
+//     console.log("eng");
+//     break;
+//   case "de":
+//     console.log("deu");
+//     break;
+//   default:
+//     console.log("language not supported");
+// }
+
+let num = 1;
+let res = num >= 0 ? '1' : '2';
+
+console.log(res)
+
+// if (num >= 0) {
+// 	res = '1';
+// } else {
+// 	res = '2';
+// }
+
+// console.log(res);
+
+
