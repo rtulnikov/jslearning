@@ -74,8 +74,8 @@
 
 // console.log(firstThreeNumb === secondThreeNumb ? 'они совпадают' : 'они не совпадают');
 
-let sum = 0;
-for(let num = 1; num < 101; num++){
-    sum += num
-}
-console.log(sum)
+// let sum = 0;
+// for(let num = 1; num < 101; num++){
+//     sum += num
+// }
+// console.log(sum)
