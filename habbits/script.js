@@ -200,7 +200,7 @@ function setIcon(context, icon){
 function addHabbit(event){
     event.preventDefault();
     const data = validateAndGetFormData(event.target, ['name', 'icon', 'target']);
-    console.log("g")
+
     if(!data){
         return;
     }
