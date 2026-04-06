@@ -16,11 +16,11 @@
 
 //2 способ
 
-// let arr = [
-// 	[2, 1, 4, 3, 5],
-// 	[3, 5, 2, 4, 1],
-// 	[4, 3, 1, 5, 2],
-// ]
+let arr = [
+	[2, 1, 4, 3, 5],
+	[3, 5, 2, 4, 1],
+	[4, 3, 1, 5, 2],
+]
 
-// let arrSort = arr.map(el => el.sort((a,b) => a - b))
-// console.log(arrSort)
+let arrSort = arr.map(el => el.sort((a,b) => a - b))
+console.log(arrSort)

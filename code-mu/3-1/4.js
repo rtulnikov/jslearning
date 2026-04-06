@@ -21,9 +21,9 @@
 // console.log(arr2)
 
 //3способ
-// let arr1 = [1, 2, 3];
-// let arr2 = [1, 2, 3, 4, 5];
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3, 4, 5];
 
 
-// let newArr = arr2.slice(0, arr1.length);
-// console.log(newArr)
+let newArr = arr2.slice(0, arr1.length);
+console.log(newArr)
