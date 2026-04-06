@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0a0a0f;
+    color: #d4c9a8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Фоновый паттерн */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(120, 80, 20, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(120, 80, 20, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 0%, rgba(180, 140, 50, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+header h1 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 2.4em;
+    color: #c9a84c;
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3), 0 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 5px;
+}
+
+header .subtitle {
+    font-size: 0.95em;
+    color: #8a7a5a;
+    font-style: italic;
+}
+
+/* Статистика */
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: rgba(201, 168, 76, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #c9a84c;
+}
+
+.stat-label {
+    font-size: 0.75em;
+    color: #8a7a5a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Описание ордена */
+.order-card {
+    background: linear-gradient(145deg, rgba(30, 25, 15, 0.9), rgba(15, 12, 8, 0.95));
+    border: 2px solid rgba(201, 168, 76, 0.2);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.order-card::before {
+    content: '⚔';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    opacity: 0.15;
+}
+
+.order-card h2 {
+    font-family: 'MedievalSharp', cursive;
+    color: #c9a84c;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-card h2 .shield-icon {
+    font-size: 1.4em;
+}
+
+.description {
+    line-height: 1.8;
+    font-size: 0.95em;
+    color: #b8ad8e;
+}
+
+.description .equip-category {
+    color: #c9a84c;
+    font-weight: 700;
+}
+
+.description .equip-item {
+    color: #e0d5b5;
+}
+
+/* Слово-загадка */
+.word-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 25px 0;
+    min-height: 60px;
+    align-items: center;
+}
+
+.letter-box {
+    width: 42px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.6em;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.letter-box.hidden {
+    background: rgba(201, 168, 76, 0.08);
+    border: 2px solid rgba(201, 168, 76, 0.25);
+    color: transparent;
+}
+
+.letter-box.hidden::after {
+    content: '–';
+    color: rgba(201, 168, 76, 0.5);
+    font-size: 1.2em;
+}
+
+.letter-box.revealed {
+    background: rgba(201, 168, 76, 0.15);
+    border: 2px solid rgba(201, 168, 76, 0.5);
+    color: #c9a84c;
+    animation: revealLetter 0.5s ease;
+}
+
+.letter-box.space {
+    width: 25px;
+    background: transparent;
+    border: none;
+}
+
+.letter-box.space::after {
+    content: '';
+}
+
+@keyframes revealLetter {
+    0% { transform: scale(1.3); color: #fff; }
+    100% { transform: scale(1); color: #c9a84c; }
+}
+
+/* Клавиатура */
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.key {
+    width: 38px;
+    height: 44px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    background: rgba(201, 168, 76, 0.08);
+    color: #c9a84c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key:hover:not(:disabled) {
+    background: rgba(201, 168, 76, 0.2);
+    border-color: rgba(201, 168, 76, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.2);
+}
+
+.key:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.key:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+.key.correct {
+    background: rgba(80, 180, 80, 0.25);
+    border-color: rgba(80, 180, 80, 0.5);
+    color: #5cb85c;
+}
+
+.key.wrong {
+    background: rgba(180, 60, 60, 0.15);
+    border-color: rgba(180, 60, 60, 0.3);
+    color: #884;
+    opacity: 0.3;
+}
+
+/* Ввод буквы */
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.input-area input {
+    width: 50px;
+    height: 44px;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'MedievalSharp', cursive;
+    background: rgba(201, 168, 76, 0.08);
+    border: 2px solid rgba(201, 168, 76, 0.3);
+    border-radius: 6px;
+    color: #c9a84c;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.input-area input:focus {
+    border-color: rgba(201, 168, 76, 0.7);
+    box-shadow: 0 0 15px rgba(201, 168, 76, 0.15);
+}
+
+.btn {
+    padding: 10px 25px;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.1em;
+    border: 2px solid rgba(201, 168, 76, 0.4);
+    background: rgba(201, 168, 76, 0.1);
+    color: #c9a84c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(201, 168, 76, 0.25);
+    border-color: rgba(201, 168, 76, 0.7);
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Подсказка */
+.hint-section {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.hint-btn {
+    padding: 8px 20px;
+    font-size: 0.9em;
+    background: rgba(201, 168, 76, 0.05);
+    border-color: rgba(201, 168, 76, 0.2);
+    color: #8a7a5a;
+}
+
+.hint-btn:hover {
+    color: #c9a84c;
+    border-color: rgba(201, 168, 76, 0.5);
+}
+
+.hint-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: #a09060;
+    font-size: 0.9em;
+    display: none;
+}
+
+.hint-text.visible {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Жизни */
+.lives {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.heart {
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.heart.lost {
+    opacity: 0.15;
+    filter: grayscale(1);
+    transform: scale(0.8);
+}
+
+/* Результат */
+.result-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-overlay.visible {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+.result-box {
+    background: linear-gradient(145deg, #1e190f, #0f0c08);
+    border: 2px solid rgba(201, 168, 76, 0.4);
+    border-radius: 16px;
+    padding: 40px 50px;
+    text-align: center;
+    max-width: 500px;
+    animation: slideUp 0.5s ease;
+}
+
+.result-box h2 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.result-box h2.win {
+    color: #5cb85c;
+}
+
+.result-box h2.lose {
+    color: #d9534f;
+}
+
+.result-box .revealed-name {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.6em;
+    color: #c9a84c;
+    margin: 15px 0;
+}
+
+.result-box .result-desc {
+    color: #8a7a5a;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Прогресс */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(201, 168, 76, 0.1);
+    border-radius: 3px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a84c, #e8c84c);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+/* Лог угаданных букв */
+.guessed-letters {
+    text-align: center;
+    margin: 10px 0;
+    min-height: 24px;
+}
+
+.guessed-letters span {
+    color: #5cb85c;
+    margin: 0 3px;
+    font-weight: 700;
+}
+
+.guessed-letters .missed {
+    color: #884;
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.6em; }
+    .letter-box { width: 32px; height: 40px; font-size: 1.2em; }
+    .key { width: 30px; height: 38px; font-size: 0.85em; }
+    .order-card { padding: 18px 20px; }
+    .result-box { padding: 25px 20px; margin: 20px; }
+}
